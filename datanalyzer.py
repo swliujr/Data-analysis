@@ -13,29 +13,29 @@ oneday = datetime.timedelta(days=1)
 yesterday = today - oneday
 ctime = time.strftime('%Y-%m-%d %H:%M:%S')
 
-#tag列表
+#taglist
 taglist = [
-    'boot',  #点击app在启动过程触发
-    'mobile phone users_register interface',  #进入手机注册界面触发
-    'mobile phone verification code',  #点击获取验证码弹出二次确认提示框的确认按钮触发
-    'micro-blog import',  #点击新浪导入按钮触发, 点击完成按钮进入绑定手机号码时触发
-    'micro-blog registry access',  #进入新浪注册完善资料页触发
-    'user fill details_registration_mobile',  #进入手机注册完善资料页触发
-    'input mobile number_registration_micro-blog',  #新浪注册中的手机绑定点击完成绑定按钮触发
-    'verification code_registration_mirco-blog',  #新浪注册中的手机绑定点击获取验证码二次确认弹出框的确认按钮触发
-    'QQ_logging_the third party',  #点击qq图标按钮时候触发
-    'renren_logging_the third party',  #点击人人图标按钮触发
-    'baihe_logging_the third party',  #在百合登陆页面点击登陆按钮触发
-    'micro-blog bindings window_logging_the third party',  #弹出微博引导提示框触发
-    'logging_login_botton', #点击登陆首页登陆按钮触发
-    'logging_mobile',  #点击登陆页的登陆按钮触发
-    'verification code logging_mobile phone',  #点击验证码登陆按钮触发
-    'forget the password',  #点击忘记密码触发
-    'logging_the third party',  #点击第三方按钮后判断是老用户即触发
-    'logging_automatic',  #启动时候判断没有退出登陆的情况即触发
-    'logging_interface access',  #登陆界面的访问
-    'logging_micro-blog button click',  #点击微博登陆按钮触发
-    'logging_micro-blog automatic',  #点击新浪登陆判断本地有sina的token是触发
+    'boot',
+    'mobile phone users_register interface',
+    'mobile phone verification code',
+    'micro-blog import',
+    'micro-blog registry access',
+    'user fill details_registration_mobile',
+    'input mobile number_registration_micro-blog',
+    'verification code_registration_mirco-blog',
+    'QQ_logging_the third party',
+    'renren_logging_the third party',
+    'baihe_logging_the third party', 
+    'micro-blog bindings window_logging_the third party',
+    'logging_login_botton',
+    'logging_mobile',
+    'verification code logging_mobile phone',
+    'forget the password',
+    'logging_the third party', 
+    'logging_automatic', 
+    'logging_interface access', 
+    'logging_micro-blog button click',
+    'logging_micro-blog automatic',
     'encounter_popup avatar',
     'encounter_popup photo',
     'encounter_popup invite',
@@ -43,10 +43,9 @@ taglist = [
     'encounter_tactics code',
     'show time'
 ]
-#constant日志格式
+#constant log format
 '''
-时时上传日志格式，例如：
-2014-07-25 17:17:02|2014-07-27 17:17:02|3234799|3.2.4|0026##jianjian_android_google_y|LG-D802|4.2.2|12E1F6CA1CB85EBA11042B9C8981D5AA|0|boot
+2014-07-25 17:17:02|2014-07-27 17:17:02|3234799|3.2.4|0026##android_google_y|LG-D802|4.2.2|12E1F6CA1CB85EBA11042B9C8981D5AA|0|boot
 '''
 logformat = {
     'servertime': 0,
@@ -61,31 +60,31 @@ logformat = {
     'tag': 9
 }
 
-#客户端时时上传日志的路径
+#dsclog save path
 clogbase = '/home/allon/python/data/constant'
 
-#客户端上传日志文件保存路径
+#dfclog save path
 flogbase = '/home/allon/python/data/file'
 
-# #线上数据库
+# #online mysql
 # con = mdb.connect('10.0.0.26','meet_user','meet_user','meet')
 #
-# #数据分析数据库
+# #datanalyzer mysql
 # scon = mdb.connect('10.0.0.26','meet_data','data_passwd','data')
 
-#mongo数据库
+#mongodb
 connection=pymongo.Connection('localhost',27017)
 db = connection.data
 collection = db.data
 dsclogs = db.dsclogs
 
-#获取时时日志路径
+#get dsclog save path
 def getcflog(cd):
     lfname = '-'.join(cd) + '.log'
     cflog = clogbase + '/' + lfname
     return cflog
 
-#时时上伟日志数据椕分析
+#dsclog datanalyzer
 class Dclog:
     def __init__(self,clog,cnum):
         self.clog = clog
@@ -113,7 +112,7 @@ def getssclogresult(date,lnum):
     rclog = Dclog(cflog,lnum)
     return rclog.dcresult()
 
-#分析定时上传日志
+#dfclog datanalyzer
 def listfile(fd):
     str = '/'
     logpath = str.join([flogbase,str.join(fd),str])
@@ -132,13 +131,13 @@ def getclogresult(date,keywords):
     reg = r'\|1\|%s' % keywords
     date = list(date)
     getclog = listfile(date)
-    #提取用户的userid
+    #get userid
     userloglist = filter(slog,getclog)
     useridlist = map((lambda x: x.split('_')[1].split('.')[0]),userloglist)
-    #返回tag,包含此tag的id,用户数量
+    #return tag, tag content userid,userid count
     return keywords,useridlist,len(useridlist)
 
-#查询业务数据库中的数据
+# #get online mysql data
 def getchannel():
     try:
         cur = con.cursor()
@@ -149,31 +148,30 @@ def getchannel():
         if con:
             con.close()
 
-#保存最终得出的统计数据至数据
+# #save data to mysql 
 
-def savedate():
-    try:
-        cur = scon.cursor()
-        stmt = "insert into regchannel(channelid,download) values(%s,%s)"
-        cur.executemany(stmt,rclog.dcresult())
-        scon.commit()
-    finally:
-        if scon:
-            scon.close()
+# def savedate():
+#     try:
+#         cur = scon.cursor()
+#         stmt = "insert into regchannel(channelid,download) values(%s,%s)"
+#         cur.executemany(stmt,rclog.dcresult())
+#         scon.commit()
+#     finally:
+#         if scon:
+#             scon.close()
 
-# #统计每天所有客户中包括tag的个数
+# dfclog everyday tag count all user
 def gettagcount(d):
     tagcount = []
     for tag in taglist:
         tagcount.append(getclogresult(d,tag))
     return tagcount
 
-#统计每天所有客户时时上传日志中包括每列关键字个数
+#dsclog column count
 def getsstagcount(d,k):
     return k,getssclogresult(d, logformat[k])
 
 dsclog = dict([str(p[0]),str(p[1::])] for p in gettagcount(('2014','07','17')))
 dsclogs.insert(dsclog)
-# print gettagcount(('2014','07','17'))
-# print dict([str(p[0]),str(p[1::])] for p in list(getsstagcount(('2014','07','17'),'channelid')))
-print getsstagcount(('2014','07','17'),'channelid')
+
+#print getsstagcount(('2014','07','17'),'channelid')
