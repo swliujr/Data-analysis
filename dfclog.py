@@ -7,7 +7,11 @@ import MySQLdb as mdb
 import time
 import datetime
 import pymongo
+import simplejson as json
 
+today = datetime.date.today()
+oneday = datetime.timedelta(days=1)
+yesterday = today - oneday
 ctime = time.strftime('%Y-%m-%d %H:%M:%S')
 
 #tag列表
@@ -17,28 +21,12 @@ taglist = [
     'mobile phone verification code',
     'micro-blog import',
     'micro-blog registry access',
-    'user fill details_registration_mobile',
-    'input mobile number_registration_micro-blog',
-    'verification code_registration_mirco-blog',
-    'QQ_logging_the third party',
-    'renren_logging_the third party',
-    'baihe_logging_the third party',
-    'micro-blog bindings window_logging_the third party',
-    'logging_login_botton',
-    'logging_mobile',
-    'verification code logging_mobile phone',
-    'forget the password',
-    'logging_the third party',
-    'logging_automatic',
-    'logging_interface access',
-    'logging_micro-blog button click',
-    'logging_micro-blog automatic',
-    'encounter_popup avatar',
-    'encounter_popup photo',
-    'encounter_popup invite',
-    'encounter_popup binding sina',
-    'encounter_tactics code',
-    'show time'
+]
+
+channellist = [
+    '0001##allon_android_allonapp_y',
+    '0002##allon_android_allon3g_y',
+    '0003##allon_android_allonweb_y',
 ]
 
 #日志格式
@@ -82,28 +70,26 @@ def slog(log):
     logfile.close
     return frlog
 
-def getclogresult(date,keywords):
-    global reg
-    reg = r'\|1\|%s' % keywords
+def getclogresult(date,channel):
     date = list(date)
     getclog = listfile(date)
-    #提取用户的userid
-    userloglist = filter(slog,getclog)
-    useridlist = map((lambda x: x.split('_')[1].split('.')[0]),userloglist)
-    #返回tag,包含此tag的id,用户数量
-    return keywords,{'userid': useridlist , 'total': len(useridlist)}
-
-# 统计每天所有客户中包括tag的个数
-def gettagcount(d):
-    tagcount = []
+    r = {}
+    global reg
     for tag in taglist:
-        tagcount.append(getclogresult(d,tag))
-    return tagcount
-    
-# 将结果保存至数据库
+        reg = r'%s(.*)1\|%s' % (channel,tag)
+        userloglist = filter(slog,getclog)
+        useridlist = map((lambda x: x.split('_')[1].split('.')[0]),userloglist)
+        r[tag] = {"userid":useridlist,"total":len(useridlist)}
+    return r
+
+def getchannelr(d):
+    l = {}
+    for channel in channellist:
+        l[channel] = getclogresult(d,channel)
+    return l
+
 def savedata(d):
-    dfclogdata = dict([str(p[0]),str(p[1])] for p in gettagcount(('2014','07','17')))
-    r = {'details':dfclogdata,'created':ctime}
-    dfclogs.insert(r)
+    created = {'created':ctime}
+    dfclogs.insert(dict(getchannelr(d),**created))
 
 savedata(('2014','07','17'))
