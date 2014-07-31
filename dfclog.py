@@ -35,6 +35,14 @@ channellist = [
 2014-07-25 17:17:02|2014-07-27 17:17:02|3234799|3.2.4|0026##allon_android_google_y|LG-D802|4.2.2|12E1F6CA1CB85EBA11042B9C8981D5AA|0|boot
 '''
 
+t = {}
+t['created'] = ctime
+#日志格式
+'''
+时时上传日志格式，例如：
+2014-07-17 15:45:54|3109069|3.3.0|0001##jianjian_android_jianjianapp_y|GT-N7100|4.3|0E9F702F2F5AEB45D5E446B21CB64F86|1|show time|2019
+'''
+
 #客户端上传日志文件保存路径
 dfclogbase = '/home/allon/python/data/file'
 
@@ -84,9 +92,9 @@ def getchannelr(d):
         l[channel] = getclogresult(d,channel)
     return l
 
-
 def savedata(d):
-    created = {'created':ctime}
-    dfclogs.insert(dict(getchannelr(d),**created))
+    r = {}
+    r['detail'] = getchannelr(d)
+    dfclogs.insert(dict(r,**t))
 
 savedata(('2014','07','17'))
