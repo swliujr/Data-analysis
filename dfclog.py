@@ -44,11 +44,7 @@ db = connection.data
 collection = db.data
 dfclogs = db.dfclogs
 
-#获取时时日志路径
-def getdfclog(cd):
-    lfname = '-'.join(cd) + '.log'
-    cflog = clogbase + '/' + lfname
-    return cflog
+#获取日志路径
 
 def getssclogresult(date,lnum):
     date = list(date)
