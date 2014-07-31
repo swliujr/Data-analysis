@@ -88,6 +88,7 @@ def getchannelr(d):
         l[channel] = getclogresult(d,channel)
     return l
 
+
 def savedata(d):
     created = {'created':ctime}
     dfclogs.insert(dict(getchannelr(d),**created))
