@@ -18,12 +18,6 @@ tag = 'show time'
 #定义时间字段，存储mongo记录时使用
 createtime = {'created':ctime}
 
-#日志格式
-'''
-时时上传日志格式，例如：
-2014-07-17 15:45:54|3109069|3.3.0|0001##jianjian_android_jianjianapp_y|GT-N7100|4.3|0E9F702F2F5AEB45D5E446B21CB64F86|1|show time|2019
-'''
-
 #客户端上传日志文件保存路径
 dfclogbase = config.get('general','dfclogbase')
 
