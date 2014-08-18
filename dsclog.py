@@ -10,12 +10,6 @@ import ConfigParser
 config = ConfigParser.RawConfigParser()
 config.read('config.py')
 
-#日志格式
-'''
-时时上传日志格式，例如：
-2014-07-25 17:17:02|2014-07-27 17:17:02|3234799|3.2.4|0026##jianjian_android_google_y|LG-D802|4.2.2|12E1F6CA1CB85EBA11042B9C8981D5AA|0|boot
-'''
-
 #客户端上传日志路径
 dsclogbase = config.get('general','dsclogbase')
 
