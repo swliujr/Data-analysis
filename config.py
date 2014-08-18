@@ -5,23 +5,25 @@ port = 27017
 
 [mysql]
 #locale env
-#host = 10.0.0.26
+#host = 10.0.0.6
 ##port = 3306
-#username = meet_user
-#password = meet_user
-#dbname = meet
+#username = user
+#password = user_pass
+#dbname = sqite
 
 #online env
-host = 172.16.4.246
+host = 172.168.4.32
 #port = 3306
-username = user_meet_r
-password = user_meet1q2w3e4r
-dbname = meet
+username = user
+password = user_pass
+dbname = sqite
 
 [general]
+
 #locale env
 #dsclogbase = /home/allon/python/data/constant
 #dfclogbase = /home/allon/python/data/file
+
 #online env
-dsclogbase = /home/work/baihe/fire/photo/clog/constant
-dfclogbase = /home/work/baihe/fire/photo/clog/file
+dsclogbase = /home/work/clog/constant
+dfclogbase = /home/work/clog/file
