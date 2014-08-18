@@ -1,41 +1,29 @@
 # -*- coding: UTF-8 -*-
-import os
+import os,sys
 from os.path import getsize
 import glob
 import re
-import MySQLdb as mdb
-import time
-import datetime
 import pymongo
+from shareres import *
+import ConfigParser
 
-ctime = time.strftime('%Y-%m-%d %H:%M:%S')
+config = ConfigParser.RawConfigParser()
+config.read('config.py')
 
 #日志格式
 '''
 时时上传日志格式，例如：
-2014-07-25 17:17:02|2014-07-27 17:17:02|3234799|3.2.4|0026##allon_android_google_y|LG-D802|4.2.2|12E1F6CA1CB85EBA11042B9C8981D5AA|0|boot
+2014-07-25 17:17:02|2014-07-27 17:17:02|3234799|3.2.4|0026##jianjian_android_google_y|LG-D802|4.2.2|12E1F6CA1CB85EBA11042B9C8981D5AA|0|boot
 '''
-dsclogformat = {
-    'servertime': 0,
-    'clienttime': 1,
-    'userid': 2,
-    'clientversion': 3,
-    'channelid': 4,
-    'mobilemode': 5,
-    'osversion': 6,
-    'deviceid': 7,
-    'type': 8,
-    'tag': 9
-}
 
 #客户端上传日志路径
-dsclogbase = '/home/allon/python/data/constant'
+dsclogbase = config.get('general','dsclogbase')
 
 #连接mongo数据库
-connection=pymongo.Connection('localhost',27017)
-db = connection.data
-collection = db.data
-dsclogs = db.dsclogs
+host = config.get('mongodb','host')
+port = config.getint('mongodb','port')
+connection=pymongo.Connection(host,port)
+dsclogs = connection.data.dsclogs
 
 #获取dsclog日志路径
 def getdsclogpath(cd):
@@ -51,20 +39,16 @@ class Dsclog:
         self.fc = []
         self.fcs = []
         self.fcr = []
-	self.getclumn()
 
-    def getclumn(self):
+    def dcresult(self):
         with open(self.clog,'r') as f:
             for line in f:
                 self.fc.append(line.split('|')[self.cnum])
         self.fc.sort()
-        self.fcs = set(self.fc)
-
-    def dcresult(self):
-        for i in self.fcs:
+        for i in set(self.fc):
             self.fcr.append((i,self.fc.count(i)))
         return self.fcr
-
+   
 def getdsclogresult(date,lnum):
     date = list(date)
     cflog = getdsclogpath(date)
@@ -81,4 +65,5 @@ def savedata(d,k):
     created = {'created':ctime}
     dsclogs.insert(dict(dsclogdata,**created))
 
-savedata(('2014','07','17'),'channelid')
+date = (sys.argv[1],sys.argv[2],sys.argv[3])
+savedata(date,sys.argv[4])

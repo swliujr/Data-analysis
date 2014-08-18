@@ -1,42 +1,37 @@
 # -*- coding: UTF-8 -*-
-import os
+import os,sys
 from os.path import getsize
 import glob
 import re
-import time
-import datetime
 import pymongo
+from shareres import *
+import ConfigParser
 
-'''
-统计每个用户在一天中所有showtime的平均值
-'''
+config = ConfigParser.RawConfigParser()
+config.read('config.py')
 
-today = datetime.date.today()
-oneday = datetime.timedelta(days=1)
-yesterday = today - oneday
-ctime = time.strftime('%Y-%m-%d %H:%M:%S')
+#统计每个用户在一天中所有showtime的平均值
 
 #需要统计的tag
 tag = 'show time'
 
 #定义时间字段，存储mongo记录时使用
-t = {}
-t['created'] = ctime
+createtime = {'created':ctime}
 
 #日志格式
 '''
 时时上传日志格式，例如：
-2014-07-17 15:45:54|3109069|3.3.0|0001##allonandroid_jianjianapp_y|GT-N7100|4.3|0E9F702F2F5AEB45D5E446B21CB64F86|1|show time|2019
+2014-07-17 15:45:54|3109069|3.3.0|0001##jianjian_android_jianjianapp_y|GT-N7100|4.3|0E9F702F2F5AEB45D5E446B21CB64F86|1|show time|2019
 '''
 
 #客户端上传日志文件保存路径
-dfclogbase = '/home/allon/python/data/file'
+dfclogbase = config.get('general','dfclogbase')
 
-#mongo数据库连接
-connection=pymongo.Connection('localhost',27017)
-db = connection.data
-collection = db.data
-showtime = db.showtime
+#mongo数据库
+host = config.get('mongodb','host')
+port = config.getint('mongodb','port')
+connection=pymongo.Connection(host,port)
+showtime = connection.data.showtime
 
 #获取日志路径
 def listfile(fd):
@@ -72,6 +67,7 @@ def getclogresult(date):
 def savedata(d):
     r = {}
     r['detail'] = getclogresult(d)
-    showtime.insert(dict(r,**t))
+    showtime.insert(dict(r,**createtime))
 
-savedata(('2014','07','17'))
+date = (sys.argv[1],sys.argv[2],sys.argv[3])
+savedata(date)

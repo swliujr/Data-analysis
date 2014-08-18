@@ -1,59 +1,32 @@
 # -*- coding: UTF-8 -*-
-import os
+import os,sys
 from os.path import getsize
 import glob
 import re
-import MySQLdb as mdb
-import time
-import datetime
 import pymongo
-import simplejson as json
+from shareres import *
+import ConfigParser
 
-today = datetime.date.today()
-oneday = datetime.timedelta(days=1)
-yesterday = today - oneday
-ctime = time.strftime('%Y-%m-%d %H:%M:%S')
+config = ConfigParser.RawConfigParser()
+config.read('config.py')
 
-#tag列表
-taglist = [
-    'boot',
-    'mobile phone users_register interface',
-    'mobile phone verification code',
-    'micro-blog import',
-    'micro-blog registry access',
-]
+createtime = {'created':ctime}
 
-channellist = [
-    '0001##allon_android_allonapp_y',
-    '0002##allon_android_allon3g_y',
-    '0003##allon_android_allonweb_y',
-]
-
-#日志格式
-'''
-时时上传日志格式，例如：
-2014-07-25 17:17:02|2014-07-27 17:17:02|3234799|3.2.4|0026##allon_android_google_y|LG-D802|4.2.2|12E1F6CA1CB85EBA11042B9C8981D5AA|0|boot
-'''
-
-t = {}
-t['created'] = ctime
 #日志格式
 '''
 时时上传日志格式，例如：
 2014-07-17 15:45:54|3109069|3.3.0|0001##jianjian_android_jianjianapp_y|GT-N7100|4.3|0E9F702F2F5AEB45D5E446B21CB64F86|1|show time|2019
 '''
+#客户端上传日志路径
+dfclogbase = config.get('general','dfclogbase')
 
-#客户端上传日志文件保存路径
-dfclogbase = '/home/allon/python/data/file'
-
-#mongo数据库
-connection=pymongo.Connection('localhost',27017)
-db = connection.data
-collection = db.data
-dfclogs = db.dfclogs
+#连接mongo数据库
+host = config.get('mongodb','host')
+port = config.getint('mongodb','port')
+connection=pymongo.Connection(host,port)
+dfclogs = connection.data.dfclogs
 
 #获取日志路径
-
 def getssclogresult(date,lnum):
     date = list(date)
     cflog = getdfclog(date)
@@ -92,9 +65,17 @@ def getchannelr(d):
         l[channel] = getclogresult(d,channel)
     return l
 
+#查询业务数据库中的数据
+def conmysql(sql):
+    cur = con.cursor()
+    cur.execute(sql)
+    r = cur.fetchone()
+    return  "%s" % r
+
 def savedata(d):
     r = {}
     r['detail'] = getchannelr(d)
-    dfclogs.insert(dict(r,**t))
+    dfclogs.insert(dict(r,**createtime))
 
-savedata(('2014','07','17'))
+date = (sys.argv[1],sys.argv[2],sys.argv[3])
+savedata(date)
