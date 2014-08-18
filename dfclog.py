@@ -60,13 +60,6 @@ def getchannelr(d):
         l[channel] = getclogresult(d,channel)
     return l
 
-#查询业务数据库中的数据
-def conmysql(sql):
-    cur = con.cursor()
-    cur.execute(sql)
-    r = cur.fetchone()
-    return  "%s" % r
-
 def savedata(d):
     r = {}
     r['detail'] = getchannelr(d)
