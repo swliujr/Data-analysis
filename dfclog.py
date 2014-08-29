@@ -69,37 +69,41 @@ def rundfdata(d):
     return l
 
 #处理dsclog日志
-def getdsclogpath(date):
-    dclogname = '-'.join(date) + '.log'
-    dscflog = dsclogbase + '/' + dclogname
-    return dscflog
+class Register():
 
-def getdsdata(channel):
-    contentlist = []
-    for tag in dstaglist:
-        reg = re.compile(r'%s\|(.*)\|(.*)\|(.*)\|0\|%s' % (channel,tag))
-        f = open(getdsclogpath(date),'r')
-        fr = f.read()
-        f.close()
-        r = re.findall(reg,fr)
-        contentdetail = {'tag':tag,'total':len(r)}
-        contentlist.append(contentdetail)
-    return contentlist
+    def getdsclogpath(self,date):
+        self.date = date
+        dclogname = '-'.join(self.date) + '.log'
+        dscflog = dsclogbase + '/' + dclogname
+        return dscflog
 
-def dsclogrun():
-    detaillist = []
-    for channel in channellist:
-        detail = {'channel':channel,'content':getdsdata(channel)}
-        detaillist.append(detail)
-    dsclogdata = {'detail':detaillist}
-    return dsclogdata
+    def getdsdata(self,channel):
+        self.channel = channel
+        self.contentlist = []
+        for tag in regtaglist:
+            reg = re.compile(r'%s\|(.*)\|(.*)\|(.*)\|0\|%s' % (channel,tag))
+            f = open(self.getdsclogpath(date),'r')
+            fr = f.read()
+            f.close()
+            r = re.findall(reg,fr)
+            contentdetail = {'tag':tag,'total':len(r)}
+            self.contentlist.append(contentdetail)
+        return self.contentlist
+
+    def dsclogrun(self):
+        self.detaillist = []
+        for channel in channellist:
+            detail = {'channel':channel,'content':self.getdsdata(channel)}
+            self.detaillist.append(detail)
+        dsclogdata = {'detail':self.detaillist}
+        return dsclogdata
 
 #保存相关数据至数据库
-def savedata(date):
-    dfclogs.insert(dict(dsclogrun(),**createtime))
+def savedata():
+    registerdata = Register()
+    dfclogs.insert(dict(registerdata.dsclogrun(),**createtime))
     #dfclogs.update(createtime,{"$set":rundsdata(date)})
 
-# date = (sys.argv[1],sys.argv[2],sys.argv[3])
 date = ('2014','08','24')
-savedata(date)
-# savedata(date)
+savedata()
+# date = (sys.argv[1],sys.argv[2],sys.argv[3])
