@@ -1,0 +1,47 @@
+{
+	"_id" : ObjectId("53ff0193aa0bc5d425ca9b17"),
+	"detail" : [
+		{
+			"_id" : "0012##jianjian_android_zsyyh_y",
+			"content" : [
+				{
+					"tag" : "encounter_popup photo",
+					"total" : 2,
+					"userid" : [
+						"3276449",
+						"654123"
+					]
+				},
+				{
+					"tag" : "logging_automatic",
+					"total" : 2,
+					"userid" : [
+						"3276449",
+						"654123"
+					]
+				}
+			]
+		},
+		{
+			"_id" : "0011##jianjian_android_zsyyh_y",
+			"content" : [
+				{
+					"tag" : "encounter_popup photo",
+					"total" : 2,
+					"userid" : [
+						"3276449",
+						"654123"
+					]
+				},
+				{
+					"tag" : "logging_automatic",
+					"total" : 2,
+					"userid" : [
+						"3276449",
+						"654123"
+					]
+				}
+			]
+		}
+	]
+}

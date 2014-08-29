@@ -5,6 +5,7 @@ import glob
 import re
 import pymongo
 import simplejson as json
+from itertools import *
 from shareres import *
 import ConfigParser
 
@@ -22,7 +23,6 @@ createtime = {'created':ctime}
 dfclogbase = config.get('general','dfclogbase')
 #客户端上传时时日志路径
 dsclogbase = config.get('general','dsclogbase')
-
 
 #连接mongo数据库
 host = config.get('mongodb','host')
@@ -55,7 +55,7 @@ def getclogresult(date,channel):
     getclog = listfile(date)
     r = {}
     global reg
-    for tag in taglist:
+    for tag in dftaglist:
         reg = r'%s(.*)1\|%s' % (channel,tag)
         userloglist = filter(slog,getclog)
         useridlist = map((lambda x: x.split('_')[1].split('.')[0]),userloglist)
@@ -68,34 +68,38 @@ def rundfdata(d):
         l[channel] = getclogresult(d,channel)
     return l
 
-#处理dsclog日志，获取app启动次数
+#处理dsclog日志
 def getdsclogpath(date):
-    lfname = '-'.join(date) + '.log'
-    cflog = dsclogbase + '/' + lfname
-    return cflog
+    dclogname = '-'.join(date) + '.log'
+    dscflog = dsclogbase + '/' + dclogname
+    return dscflog
 
-def getdsdata(channel,date,tag):
-    reg = r'%s\|(.*)\|(.*)\|(.*)\|0\|%s' % (channel,tag)
-    reg = re.compile(reg)
-    f = open(getdsclogpath(date),'r')
-    flog = f.read()
-    frlog = re.findall(reg,flog)
-    f.close()
-    return len(frlog)
+def getdsdata(channel):
+    contentlist = []
+    for tag in dstaglist:
+        reg = re.compile(r'%s\|(.*)\|(.*)\|(.*)\|0\|%s' % (channel,tag))
+        f = open(getdsclogpath(date),'r')
+        fr = f.read()
+        f.close()
+        r = re.findall(reg,fr)
+        contentdetail = {'tag':tag,'total':len(r)}
+        contentlist.append(contentdetail)
+    return contentlist
 
-def rundsdata(date):
-    l = {}
-    for channel,tag in product(channellist,dstaglist):
-        k = '%s.%s.%s.%s' % ('detail',channel,tag,'total')
-        l[k] = getdsdata(channel,date,tag)
-    return l
+def dsclogrun():
+    detaillist = []
+    for channel in channellist:
+        detail = {'channel':channel,'content':getdsdata(channel)}
+        detaillist.append(detail)
+    dsclogdata = {'detail':detaillist}
+    return dsclogdata
 
 #保存相关数据至数据库
 def savedata(date):
-    dfclogdata = {}
-    dfclogdata['detail'] = rundfdata(date)
-    dfclogs.insert(dict(dfclogdata,**createtime))
-    dfclogs.update(createtime,{"$set":rundsdata(date)})
+    dfclogs.insert(dict(dsclogrun(),**createtime))
+    #dfclogs.update(createtime,{"$set":rundsdata(date)})
 
-date = (sys.argv[1],sys.argv[2],sys.argv[3])
+# date = (sys.argv[1],sys.argv[2],sys.argv[3])
+date = ('2014','08','24')
 savedata(date)
+# savedata(date)
