@@ -14,13 +14,26 @@ dftaglist = [
     'mobile phone verification code'
 ]
 
-dstaglist = [
+regtaglist = [
     'boot',
     'qq_logging_the_third_party',
     'renren_logging_the_third_party',
     'baihe_logging_the_third_party',
     'micro-blog_logging_the_third_party',
     'douban_logging_the_third_party'
+]
+
+logintaglist = [
+    'logging_mobile',
+    'forget the password',
+    'douban_logging_the_third_party',
+    'renren_logging_the_third_party',
+    'renren_logging_the_third_party',
+    'renren_logging_the_third_party',
+    'renren_logging_the_third_party',
+    'renren_logging_the_third_party',
+    'logging_automatic',
+    'logging_interface_access'
 ]
 
 channellist = [

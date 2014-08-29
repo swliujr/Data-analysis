@@ -1,3 +1,4 @@
+#registerdata
 {
 	"_id" : ObjectId("53ff0193aa0bc5d425ca9b17"),
 	"detail" : [
@@ -6,19 +7,11 @@
 			"content" : [
 				{
 					"tag" : "encounter_popup photo",
-					"total" : 2,
-					"userid" : [
-						"3276449",
-						"654123"
-					]
+					"total" : 2
 				},
 				{
 					"tag" : "logging_automatic",
-					"total" : 2,
-					"userid" : [
-						"3276449",
-						"654123"
-					]
+					"total" : 2
 				}
 			]
 		},
@@ -27,21 +20,37 @@
 			"content" : [
 				{
 					"tag" : "encounter_popup photo",
-					"total" : 2,
-					"userid" : [
-						"3276449",
-						"654123"
-					]
+					"total" : 2
 				},
 				{
 					"tag" : "logging_automatic",
-					"total" : 2,
-					"userid" : [
-						"3276449",
-						"654123"
-					]
+					"total" : 2
 				}
 			]
+		}
+	],
+	"created" : "2014-08-28"
+}
+#logindata
+{
+	"_id" : ObjectId("53ff0193aa0bc5d425ca9b17"),
+	"login" : 2323,
+	"detail" : [
+		{
+            "tag" : "encounter_popup photo",
+            "total" : 2
+            "userid": [
+                511545,
+                512241
+            ]
+		},
+		{
+            "tag" : "encounter_popup photo",
+            "total" : 2
+            "userid": [
+                511545,
+                512241
+            ]
 		}
 	]
 }

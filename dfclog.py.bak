@@ -70,40 +70,46 @@ def rundfdata(d):
 
 #处理dsclog日志
 class Register(object):
-
-    def getdsclogpath(self,date):
+    def __init__(self,date):
         self.date = date
+        self.contentlist = []
+        self.detaillist = []
+
+    def getdsclogpath(self):
         dclogname = '-'.join(self.date) + '.log'
         dscflog = dsclogbase + '/' + dclogname
         return dscflog
 
-    def getdsdata(self,channel):
-        self.channel = channel
-        self.contentlist = []
+    def getdsdata(self):
         for tag in regtaglist:
             reg = re.compile(r'%s\|(.*)\|(.*)\|(.*)\|0\|%s' % (channel,tag))
-            f = open(self.getdsclogpath(date),'r')
+            f = open(Register.getdsclogpath(date),'r')
             fr = f.read()
             f.close()
             r = re.findall(reg,fr)
-            contentdetail = {'tag':tag,'total':len(r)}
-            self.contentlist.append(contentdetail)
-        return self.contentlist
+            print r
+        #     contentdetail = {'tag':tag,'total':len(r)}
+        #     self.contentlist.append(contentdetail)
+        # return self.contentlist
 
     def dsclogrun(self):
-        self.detaillist = []
         for channel in channellist:
-            detail = {'channel':channel,'content':self.getdsdata(channel)}
-            self.detaillist.append(detail)
-        dsclogdata = {'detail':self.detaillist}
-        return dsclogdata
+            _Register.getdsdata(channel)
+             # detail = {'channel':channel,'content':getdsdata(channel)}
+        #     detaillist.append(detail)
+        # dsclogdata = {'detail':detaillist}
+        # return dsclogdata
 
 #保存相关数据至数据库
-def savedata():
-    registerdata = Register()
-    dfclogs.insert(dict(registerdata.dsclogrun(),**createtime))
+def savedata(date):
+    dfclogs.insert(dict(dsclogrun(),**createtime))
     #dfclogs.update(createtime,{"$set":rundsdata(date)})
 
 date = ('2014','08','24')
-savedata()
+registerdata = Register(date)
+registerdata.dsclogrun()
+
 # date = (sys.argv[1],sys.argv[2],sys.argv[3])
+
+# savedata(date)
+# savedata(date)

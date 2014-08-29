@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e10f34-faa7-40ad-9a55-3fd133ac403f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/constant/2014-08-24.log" afterPath="$PROJECT_DIR$/constant/2014-08-24.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/login.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/register.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shareres/__init__.py" afterPath="$PROJECT_DIR$/shareres/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dfclog.py" afterPath="$PROJECT_DIR$/dfclog.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodata_format.txt" afterPath="$PROJECT_DIR$/mongodata_format.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Data-analysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,21 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dfclog.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dfclog.py">
+      <file leaf-file-name="manage.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="23" selection-start="1757" selection-end="1757" vertical-scroll-proportion="2.1984537" vertical-offset="227" max-vertical-offset="1650">
+            <state line="39" column="36" selection-start="919" selection-end="919" vertical-scroll-proportion="0.79498863" vertical-offset="236" max-vertical-offset="675">
               <folding>
-                <element signature="e#24#37#0" expanded="true" />
+                <element signature="e#25#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongodata_format.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
+      <file leaf-file-name="login.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="18" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+            <state line="25" column="16" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -50,10 +55,19 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shareres/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="35" selection-start="748" selection-end="748" vertical-scroll-proportion="-6.716418" vertical-offset="0" max-vertical-offset="1665">
+            <state line="24" column="0" selection-start="513" selection-end="513" vertical-scroll-proportion="-5.373134" vertical-offset="0" max-vertical-offset="1860">
               <folding>
                 <element signature="e#25#40#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mongodata_format.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="31" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="930">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,8 +106,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/shareres/__init__.py" />
         <option value="$PROJECT_DIR$/dfclog.py" />
+        <option value="$PROJECT_DIR$/shareres/__init__.py" />
+        <option value="$PROJECT_DIR$/models/register.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/models/login.py" />
         <option value="$PROJECT_DIR$/mongodata_format.txt" />
       </list>
     </option>
@@ -159,6 +176,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shareres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data-analysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data-analysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -309,10 +340,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1639" y="-14" width="1571" height="924" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4344569" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4144819" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24951644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -363,27 +394,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shareres/__init__.py">
+    <entry file="file://$PROJECT_DIR$/models/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="35" selection-start="748" selection-end="748" vertical-scroll-proportion="-6.716418" vertical-offset="0" max-vertical-offset="1665">
-          <folding>
-            <element signature="e#25#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dfclog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="23" selection-start="1757" selection-end="1757" vertical-scroll-proportion="2.1984537" vertical-offset="227" max-vertical-offset="1650">
+        <state line="36" column="17" selection-start="855" selection-end="860" vertical-scroll-proportion="0.77970296" vertical-offset="225" max-vertical-offset="1710">
           <folding>
             <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="34" selection-start="748" selection-end="759" vertical-scroll-proportion="0.785877" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="31" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="16" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shareres/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="513" selection-end="513" vertical-scroll-proportion="-5.373134" vertical-offset="0" max-vertical-offset="1860">
+          <folding>
+            <element signature="e#25#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="36" selection-start="919" selection-end="919" vertical-scroll-proportion="0.79498863" vertical-offset="236" max-vertical-offset="675">
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
