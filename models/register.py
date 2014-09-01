@@ -1,7 +1,11 @@
+import re
+from config import *
+
 class Register:
+    def __init__(self,date):
+        self.date = date
 
     def getdsclogpath(self,date):
-        self.date = date
         dclogname = '-'.join(self.date) + '.log'
         dscflog = dsclogbase + '/' + dclogname
         return dscflog
@@ -9,9 +13,9 @@ class Register:
     def getdsdata(self,channel):
         self.channel = channel
         self.contentlist = []
-        for tag in regtaglist:
+        for tag in REGTAGLIST:
             reg = re.compile(r'%s\|(.*)\|(.*)\|(.*)\|0\|%s' % (channel,tag))
-            f = open(self.getdsclogpath(date),'r')
+            f = open(self.getdsclogpath(self.date),'r')
             fr = f.read()
             f.close()
             r = re.findall(reg,fr)
@@ -21,7 +25,7 @@ class Register:
 
     def dsclogrun(self):
         self.detaillist = []
-        for channel in channellist:
+        for channel in CHANNELLIST:
             detail = {'channel':channel,'content':self.getdsdata(channel)}
             self.detaillist.append(detail)
         dsclogdata = {'detail':self.detaillist}

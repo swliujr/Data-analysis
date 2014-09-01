@@ -1,3 +1,6 @@
+import re
+from config import *
+
 class Login:
 
     def listfile(self,fd):

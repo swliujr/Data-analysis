@@ -1,12 +1,7 @@
 # -*- coding: UTF-8 -*-
 
-import datetime
-import time
-
-today = datetime.date.today()
-oneday = datetime.timedelta(days=1)
-ctime = str(today - oneday)
-# ctime = time.strftime('%Y-%m-%d')
+dsclogbase = '/home/allon/workspace/Data-analysis/constant'
+dfclogbase = '/home/allon/workspace/Data-analysis/file'
 
 dftaglist = [
     'boot',
@@ -14,7 +9,7 @@ dftaglist = [
     'mobile phone verification code'
 ]
 
-regtaglist = [
+REGTAGLIST = [
     'boot',
     'qq_logging_the_third_party',
     'renren_logging_the_third_party',
@@ -36,7 +31,7 @@ logintaglist = [
     'logging_interface_access'
 ]
 
-channellist = [
+CHANNELLIST = [
     # '0001##jianjian_android_jianjianapp_y',
     # '0002##jianjian_android_jianjian3g_y',
     # '0003##jianjian_android_jianjianweb_y',
@@ -51,7 +46,7 @@ channellist = [
     # '0013##jianjian_android_tx_y',
     # '0014##jianjian_android_baidu_y ',
     # '0015##jianjian_android_aliyun_y',
-    # '0016##jianjian_android_dangle_y',
+    # '0016##jianjian_android_dangle_y'
     # '0017##jianjian_android_oppo_y',
     # '0019##jianjian_android_nd_y',
     # '0020##jianjian_android_mmy_y',
