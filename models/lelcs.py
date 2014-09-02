@@ -6,15 +6,17 @@ def runlelcs(date,dfclogbase,taglist):
     run = Lelcs(date,dfclogbase,taglist)
     return run.runlelcs()
 
+def listfile(date,dfclogbase):
+    str = '/'
+    logpath = str.join([dfclogbase,str.join(date),str])
+    return glob.glob('%s*' % logpath)
+
 class Lelcs:
+
     def __init__(self,date,dfclogbase,taglist):
         self.date = date
         self.dfclogbase = dfclogbase
         self.taglist = taglist
-    def listfile(self,date):
-        str = '/'
-        logpath = str.join([self.dfclogbase,str.join(self.date),str])
-        return glob.glob('%s*' % logpath)
 
     def slog(self,log):
         imgre = re.compile(reg)
@@ -25,7 +27,7 @@ class Lelcs:
         return frlog
 
     def runlelcs(self):
-        clogpath = self.listfile(self.date)
+        clogpath = listfile(self.date,self.dfclogbase)
         logindata = []
         global reg
         for tag in self.taglist:

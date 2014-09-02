@@ -5,7 +5,7 @@ from os.path import getsize
 import pymongo
 import simplejson as json
 from itertools import *
-from models import register,lelcs
+from models import register,lelcs,login
 from models.config import *
 import ConfigParser
 
@@ -42,8 +42,11 @@ date = ('2014','08','24')
 # s_register = connection.data.s_register
 # s_register.save(dict(register.dsclogrun(date,DSCLOGBASE,CHANNELLIST,REGTAGLIST),**createtime))
 
-s_login = connection.data.s_login
-s_login.save(dict(lelcs.runlelcs(date,DFCLOGBASE,LOGINTAGLIST),**createtime))
+# db.s_login.update({"created" : "2014-09-01"},{'$set':{"login" : 2323}})
+
+# s_login = connection.data.s_login
+# s_login.save(dict(lelcs.runlelcs(date,DFCLOGBASE,LOGINTAGLIST),**createtime))
+login.usercount()
 #
 # s_encounter = connection.data.s_encounter
 # s_encounter.save(dict(lelcs.runlelcs(date,DFCLOGBASE,ENCOUNTERTAGLIST),**createtime))

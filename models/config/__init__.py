@@ -1,11 +1,5 @@
 # -*- coding: UTF-8 -*-
 
-DFTAGLIST = [
-    'boot',
-    'mobile phone users_register interface',
-    'mobile phone verification code'
-]
-
 REGTAGLIST = [
     'boot',
     'qq_logging_the_third_party',
@@ -16,13 +10,14 @@ REGTAGLIST = [
 ]
 
 LOGINTAGLIST = [
-    'forget_the_password',
+    'logging_mobile',
+    'forget the password',
     'douban_logging_the_third_party',
+    'sinweibo_logging_the_third_party',
+    'txweibo_logging_the_third_party',
+    'qq_logging_the_third_party',
     'renren_logging_the_third_party',
-    'renren_logging_the_third_party',
-    'renren_logging_the_third_party',
-    'renren_logging_the_third_party',
-    'renren_logging_the_third_party',
+    'baihe_logging_the_third_party',
     'logging_automatic',
     'logging_interface_access'
 ]
