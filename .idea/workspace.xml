@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e10f34-faa7-40ad-9a55-3fd133ac403f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/config/config.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shareres/__init__.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/login.py" afterPath="$PROJECT_DIR$/models/login.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/lelcs.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/login.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file/2014/08/24/2014-08-24_3276449.log" afterPath="$PROJECT_DIR$/file/2014/08/24/2014-08-24_3276449.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file/2014/08/24/2014-08-24_3327813.log" afterPath="$PROJECT_DIR$/file/2014/08/24/2014-08-24_3327813.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/config/__init__.py" afterPath="$PROJECT_DIR$/models/config/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodata_format.txt" afterPath="$PROJECT_DIR$/mongodata_format.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/register.py" afterPath="$PROJECT_DIR$/models/register.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,19 +34,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="manage.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="manage.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="27" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+            <state line="54" column="53" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.79498863" vertical-offset="461" max-vertical-offset="900">
+              <folding>
+                <element signature="e#25#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/login.py">
+      <file leaf-file-name="register.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/register.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="43" selection-start="584" selection-end="591" vertical-scroll-proportion="0.51140064" vertical-offset="203" max-vertical-offset="510">
+            <state line="24" column="65" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="660">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -53,8 +68,19 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/config/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="1" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770">
+            <state line="5" column="36" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lelcs.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/lelcs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="23" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,21 +101,25 @@
         <option value="$PROJECT_DIR$/dfclog.py" />
         <option value="$PROJECT_DIR$/shareres/__init__.py" />
         <option value="$PROJECT_DIR$/models/__init__.py" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/models/config.py" />
         <option value="$PROJECT_DIR$/models/share/__init__.py" />
+        <option value="$PROJECT_DIR$/models/login.py" />
+        <option value="$PROJECT_DIR$/models/encounter.py" />
+        <option value="$PROJECT_DIR$/share/__init__.py" />
         <option value="$PROJECT_DIR$/mongodata_format.txt" />
         <option value="$PROJECT_DIR$/models/register.py" />
-        <option value="$PROJECT_DIR$/models/login.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/models/config/__init__.py" />
+        <option value="$PROJECT_DIR$/models/lelcs.py" />
         <option value="$PROJECT_DIR$/manage.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1405" />
+    <option name="x" value="39" />
     <option name="y" value="-14" />
-    <option name="width" value="1337" />
-    <option name="height" value="792" />
+    <option name="width" value="1571" />
+    <option name="height" value="924" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -147,24 +177,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data-analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data-analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,20 +331,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1405" y="-14" width="1337" height="792" extended-state="6" />
+    <frame x="39" y="-14" width="1571" height="924" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4962631" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4144819" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29384965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24951644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -361,14 +373,9 @@
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="36" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="465">
-          <folding />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -400,50 +407,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/register.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dfclog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="36" selection-start="2589" selection-end="2589" vertical-scroll-proportion="2.0521173" vertical-offset="810" max-vertical-offset="1710">
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#24#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="31" selection-start="811" selection-end="811" vertical-scroll-proportion="0.90228015" vertical-offset="428" max-vertical-offset="930">
+        <state line="54" column="6" selection-start="972" selection-end="972" vertical-scroll-proportion="1.8451025" vertical-offset="0" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="65" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="660">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/config/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770">
+        <state line="5" column="36" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1965">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/lelcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="23" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="43" selection-start="584" selection-end="591" vertical-scroll-proportion="0.51140064" vertical-offset="203" max-vertical-offset="510">
+        <state line="54" column="53" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.79498863" vertical-offset="461" max-vertical-offset="900">
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

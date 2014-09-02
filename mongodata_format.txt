@@ -31,7 +31,7 @@
 	],
 	"created" : "2014-08-28"
 }
-#logindata
+#logindata and encounter and like and setting
 {
 	"_id" : ObjectId("53ff0193aa0bc5d425ca9b17"),
 	"login" : 2323,
@@ -45,12 +45,13 @@
             ]
 		},
 		{
-            "tag" : "encounter_popup photo",
+            "tag" : "logging_automatic",
             "total" : 2
             "userid": [
                 511545,
                 512241
             ]
 		}
-	]
+	],
+	"created" : "2014-08-28"
 }

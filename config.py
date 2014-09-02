@@ -7,7 +7,7 @@ port = 27017
 #locale env
 host = 10.0.0.26
 #port = 3306
-username = meet_user
+username = meet_user''
 password = meet_user
 dbname = meet
 

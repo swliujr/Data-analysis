@@ -1,9 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-dsclogbase = '/home/allon/workspace/Data-analysis/constant'
-dfclogbase = '/home/allon/workspace/Data-analysis/file'
-
-dftaglist = [
+DFTAGLIST = [
     'boot',
     'mobile phone users_register interface',
     'mobile phone verification code'
@@ -18,9 +15,8 @@ REGTAGLIST = [
     'douban_logging_the_third_party'
 ]
 
-logintaglist = [
-    'logging_mobile',
-    'forget the password',
+LOGINTAGLIST = [
+    'forget_the_password',
     'douban_logging_the_third_party',
     'renren_logging_the_third_party',
     'renren_logging_the_third_party',
@@ -29,6 +25,36 @@ logintaglist = [
     'renren_logging_the_third_party',
     'logging_automatic',
     'logging_interface_access'
+]
+
+ENCOUNTERTAGLIST = [
+    'encounter_user_name',
+    'left_draw_record',
+    'right_draw_record',
+    'matching_successs_number',
+    'contact_list',
+    'head_examine',
+    'photo_number',
+    'personal_data_not_complete',
+    'head_button_click_number',
+    'encounter_popup_photo',
+    'encounter_popup_invite'
+]
+LIKETAGLIST = [
+    'like_each_other_button_click',
+    'i_like_button_click',
+    'like_me_button_click'
+]
+
+SETINGTAGLIST = [
+    'third_party invitation_we_chat_friends',
+    'third_party invitation_we_chat_memory',
+    'third_party invitation_micro-blog',
+    'third_party invitation_qq_space',
+    'third_party invitation_douban',
+    'third_party invitation_short_message',
+    'third_party invitation_renren',
+    'third_party invitation_tecent_micro-blog'
 ]
 
 CHANNELLIST = [
@@ -92,19 +118,6 @@ CHANNELLIST = [
     # '0115##jianjian_android_jianjianxiaomiax15_y',
     # '0116##jianjian_android_jianjianxiaomiax16_y'
 ]
-
-dsclogformat = {
-        'servertime': 0,
-        'clienttime': 1,
-        'userid': 2,
-        'clientversion': 3,
-        'channelid': 4,
-        'mobilemode': 5,
-        'osversion': 6,
-        'deviceid': 7,
-        'type': 8,
-        'tag': 9
-}
 
 #数据库中定义的注册来源
 registersource = {
