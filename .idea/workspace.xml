@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e10f34-faa7-40ad-9a55-3fd133ac403f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/login.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/encounter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/getmysqldata.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/like.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/setting.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dfclog.py.bak" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/models/config.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file/2014/08/24/2014-08-24_3276449.log" afterPath="$PROJECT_DIR$/file/2014/08/24/2014-08-24_3276449.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file/2014/08/24/2014-08-24_3327813.log" afterPath="$PROJECT_DIR$/file/2014/08/24/2014-08-24_3327813.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/config/__init__.py" afterPath="$PROJECT_DIR$/models/config/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dfclog.py" afterPath="$PROJECT_DIR$/dfclog.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dmysqldata.py" afterPath="$PROJECT_DIR$/dmysqldata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dsclog.py" afterPath="$PROJECT_DIR$/dsclog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/lelcs.py" afterPath="$PROJECT_DIR$/models/lelcs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/login.py" afterPath="$PROJECT_DIR$/models/login.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodata_format.txt" afterPath="$PROJECT_DIR$/mongodata_format.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showtime.py" afterPath="$PROJECT_DIR$/showtime.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Data-analysis.iws" />
@@ -32,30 +45,19 @@
       <file leaf-file-name="manage.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="15" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.5899772" vertical-offset="461" max-vertical-offset="945">
+            <state line="33" column="21" selection-start="913" selection-end="913" vertical-scroll-proportion="1.3306452" vertical-offset="0" max-vertical-offset="675">
               <folding>
-                <element signature="e#25#38#0" expanded="true" />
+                <element signature="e#25#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/login.py">
+      <file leaf-file-name="like.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/like.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="134" selection-end="143" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+            <state line="0" column="0" selection-start="0" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lelcs.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/lelcs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="-5.142857" vertical-offset="0" max-vertical-offset="660">
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -63,7 +65,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/config/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="21" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1890">
+            <state line="61" column="0" selection-start="1451" selection-end="1451" vertical-scroll-proportion="7.8358207" vertical-offset="1440" max-vertical-offset="2190">
               <folding />
             </state>
           </provider>
@@ -72,16 +74,7 @@
       <file leaf-file-name="mongodata_format.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="13" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="356" max-vertical-offset="930">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dfclog.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dfclog.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="49" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="1061" max-vertical-offset="1590">
+            <state line="15" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
               <folding />
             </state>
           </provider>
@@ -100,19 +93,26 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/dfclog.py" />
         <option value="$PROJECT_DIR$/shareres/__init__.py" />
         <option value="$PROJECT_DIR$/models/__init__.py" />
-        <option value="$PROJECT_DIR$/models/config.py" />
         <option value="$PROJECT_DIR$/models/share/__init__.py" />
-        <option value="$PROJECT_DIR$/models/encounter.py" />
         <option value="$PROJECT_DIR$/share/__init__.py" />
-        <option value="$PROJECT_DIR$/mongodata_format.txt" />
         <option value="$PROJECT_DIR$/models/register.py" />
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/models/config/__init__.py" />
-        <option value="$PROJECT_DIR$/models/lelcs.py" />
+        <option value="$PROJECT_DIR$/dfclog.py" />
+        <option value="$PROJECT_DIR$/dmysqldata.py" />
+        <option value="$PROJECT_DIR$/dsclog.py" />
+        <option value="$PROJECT_DIR$/showtime.py" />
+        <option value="$PROJECT_DIR$/models/config.py" />
+        <option value="$PROJECT_DIR$/models/encouter.py" />
         <option value="$PROJECT_DIR$/models/login.py" />
+        <option value="$PROJECT_DIR$/models/encounter.py" />
+        <option value="$PROJECT_DIR$/models/getmysqldata.py" />
+        <option value="$PROJECT_DIR$/models/lelcs.py" />
+        <option value="$PROJECT_DIR$/models/like.py" />
+        <option value="$PROJECT_DIR$/mongodata_format.txt" />
+        <option value="$PROJECT_DIR$/models/setting.py" />
+        <option value="$PROJECT_DIR$/models/config/__init__.py" />
         <option value="$PROJECT_DIR$/manage.py" />
       </list>
     </option>
@@ -353,14 +353,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="-14" width="1571" height="924" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4144819" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49812734" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32833958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24951644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15087041" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -393,9 +393,101 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="27" selection-start="1785" selection-end="1797" vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="1035">
+          <folding>
+            <element signature="e#25#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dmysqldata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="32" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#24#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="49" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0" vertical-offset="655" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/config.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="7" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/config/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="11" selection-start="1173" selection-end="1184" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="37" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#25#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dmysqldata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="22" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#24#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="79" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="25" selection-start="1437" selection-end="1437" vertical-scroll-proportion="0.0" vertical-offset="851" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/config.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/config/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="28" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1770">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showtime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="36" selection-start="919" selection-end="919" vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="675">
           <folding>
-            <element signature="e#25#38#0" expanded="true" />
+            <element signature="e#25#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -409,15 +501,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dsclog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="27" selection-start="966" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1035">
+        <state line="42" column="27" selection-start="966" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql_operator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="23" selection-start="657" selection-end="657" vertical-scroll-proportion="0.6870229" vertical-offset="0" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dsclog.py">
+    <entry file="file://$PROJECT_DIR$/dfclog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="27" selection-start="966" selection-end="972" vertical-scroll-proportion="0.07744875" vertical-offset="506" max-vertical-offset="945">
+        <state line="12" column="23" selection-start="260" selection-end="260" vertical-scroll-proportion="0.11811024" vertical-offset="0" max-vertical-offset="1590">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showtime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="24" selection-start="211" selection-end="211" vertical-scroll-proportion="0.11811024" vertical-offset="0" max-vertical-offset="1005">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/config.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="156" selection-end="156" vertical-scroll-proportion="0.31380752" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="68" selection-end="68" vertical-scroll-proportion="0.06276151" vertical-offset="0" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dmysqldata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="42" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.78451884" vertical-offset="225" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#24#33#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -428,64 +555,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/register.py">
+    <entry file="file://$PROJECT_DIR$/dsclog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="65" selection-start="841" selection-end="841" vertical-scroll-proportion="0.71753985" vertical-offset="45" max-vertical-offset="660">
+        <state line="59" column="45" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.5967742" vertical-offset="573" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/getmysqldata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.16129032" vertical-offset="0" max-vertical-offset="372">
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#25#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
+    <entry file="file://$PROJECT_DIR$/models/lelcs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="468" selection-end="468" vertical-scroll-proportion="0.9225513" vertical-offset="0" max-vertical-offset="510">
+        <state line="23" column="29" selection-start="571" selection-end="571" vertical-scroll-proportion="-0.62857145" vertical-offset="293" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dfclog.py">
+    <entry file="file://$PROJECT_DIR$/models/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="49" selection-start="2842" selection-end="2842" vertical-scroll-proportion="0.0" vertical-offset="1061" max-vertical-offset="1590">
+        <state line="4" column="15" selection-start="128" selection-end="128" vertical-scroll-proportion="0.16129032" vertical-offset="0" max-vertical-offset="372">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/config/__init__.py">
+    <entry file="file://$PROJECT_DIR$/models/encounter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1890">
+        <state line="10" column="31" selection-start="298" selection-end="298" vertical-scroll-proportion="0.4178273" vertical-offset="0" max-vertical-offset="840">
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/like.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="15" selection-start="130" selection-end="130" vertical-scroll-proportion="0.16129032" vertical-offset="0" max-vertical-offset="372">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mongodata_format.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="13" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="356" max-vertical-offset="930">
+        <state line="15" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/lelcs.py">
+    <entry file="file://$PROJECT_DIR$/models/config/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="-5.142857" vertical-offset="0" max-vertical-offset="660">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="134" selection-end="143" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+        <state line="61" column="0" selection-start="1451" selection-end="1451" vertical-scroll-proportion="7.8358207" vertical-offset="1440" max-vertical-offset="2190">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="15" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.5899772" vertical-offset="461" max-vertical-offset="945">
+        <state line="33" column="21" selection-start="913" selection-end="913" vertical-scroll-proportion="1.3306452" vertical-offset="0" max-vertical-offset="675">
           <folding>
-            <element signature="e#25#38#0" expanded="true" />
+            <element signature="e#25#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

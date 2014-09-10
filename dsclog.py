@@ -8,7 +8,7 @@ from shareres import *
 import ConfigParser
 
 config = ConfigParser.RawConfigParser()
-config.read('config.py')
+config.read('config.cfg')
 
 #客户端上传日志路径
 dsclogbase = config.get('general','dsclogbase')

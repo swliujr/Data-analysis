@@ -5,13 +5,13 @@ import pymongo
 import MySQLdb as mdb
 import simplejson as json
 from itertools import product
-from shareres import *
+from models.config import *
 import ConfigParser
 
 config = ConfigParser.RawConfigParser()
-config.read('config.py')
+config.read('config.cfg')
 
-createtime = {'created':ctime}
+#createtime = {'created':ctime}
 
 #mysql数据库
 host = config.get('mysql','host')
@@ -37,7 +37,7 @@ def conmysql(sqlinit,sql):
 def insertmdata():
     rsource = registersource.keys()
     sqlinit = "set session group_concat_max_len=9999999"
-    for c,r in product(channellist,rsource):
+    for c,r in product(CHANNELLIST,rsource):
         sql = "select concat('{\"detail.%s.%s\":{\"total\": ',count(id),' , \"userid\": [',group_concat(id),']}}') " \
               "from meet_user " \
               "where channel regexp '(.*)%s(.*)' and " \
@@ -46,8 +46,9 @@ def insertmdata():
         queryresult = conmysql(sqlinit,sql)
         if queryresult == 'None':
             queryresult = '{"detail.%s.%s":{"total":0,"userid":[]}}' % (c,r)
-        dq = json.loads(queryresult)
-        dfclogs.update(createtime,{"$set":dq})
+        print queryresult
+        # dq = json.loads(queryresult)
+        # dfclogs.update(createtime,{"$set":dq})
 #    for c in channellist:
 #        sql = "set session group_concat_max_len=9999999;" \
 #              "select concat('{\"detail.%s.%s\":{\"total\": ',count(id),' , \"userid\": [',group_concat(id),']}}')" \
@@ -60,5 +61,4 @@ def insertmdata():
 #        dfclogs.update(createtime,{"$set":dq})
     if con:
         con.close()
-
 insertmdata()

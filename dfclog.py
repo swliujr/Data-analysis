@@ -10,7 +10,7 @@ from shareres import *
 import ConfigParser
 
 config = ConfigParser.RawConfigParser()
-config.read('config.py')
+config.read('config.cfg')
 
 createtime = {'created':ctime}
 

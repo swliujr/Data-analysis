@@ -1,16 +1,13 @@
 import lelcs
 
-def tagdata(date,DFCLOGBASE,LOGINTAGLIST):
-    data = lelcs.runlelcs(date,DFCLOGBASE,LOGINTAGLIST)
+def tagdata(date,dfclogbase,logintaglist):
+    data = lelcs.runlelcs(date,dfclogbase,logintaglist)
     return data
 
 def usercount(date,dfclogbase):
-    filelist = lelcs.listfile(date,DFCLOGBASE)
+    filelist = lelcs.listfile(date,dfclogbase)
     logincount={'login':len(filelist)}
     return logincount
 
-# def meregdict():
-#     print dict(tagdata(date,DFCLOGBASE,LOGINTAGLIST),**usercount(date,dfclogbase))
-
-# s_login = connection.data.s_login
-# s_login.save(dict(lelcs.runlelcs(date,DFCLOGBASE,LOGINTAGLIST),**createtime))
+def meregdict(date,dfclogbase,logintaglist):
+    return dict(tagdata(date,dfclogbase,logintaglist),**usercount(date,dfclogbase))

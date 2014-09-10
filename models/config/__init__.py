@@ -1,5 +1,31 @@
 # -*- coding: UTF-8 -*-
 
+#locale env
+DSCLOGBASE = '/home/allon/workspace/Data-analysis/constant'
+DFCLOGBASE = '/home/allon/workspace/Data-analysis/file'
+##mongo db connect
+MQHOST = 'localhost'
+MQPORT = 27017
+##mysql db connect
+MSHOST = '10.0.0.26'
+#port = 3306
+MSUSERNAME = 'meet_user'
+MSPASSWORD = 'meet_user'
+MSDBNAME = 'meet'
+
+#online env
+# dsclogbase = /home/work/clog/constant
+# dfclogbase = /home/work/clog/file
+# mghost = 'localhost'
+# mqport = '27017'
+# mshost = '10.0.0.26'
+# #port = 3306'
+# msusername = 'meet_user'
+# mspassword = 'meet_user'
+# msdbname = 'meet'
+
+SQLINIT = 'set session group_concat_max_len=9999999'
+
 REGTAGLIST = [
     'boot',
     'qq_logging_the_third_party',
@@ -23,14 +49,6 @@ LOGINTAGLIST = [
 ]
 
 ENCOUNTERTAGLIST = [
-    'encounter_user_name',
-    'left_draw_record',
-    'right_draw_record',
-    'matching_successs_number',
-    'contact_list',
-    'head_examine',
-    'photo_number',
-    'personal_data_not_complete',
     'head_button_click_number',
     'encounter_popup_photo',
     'encounter_popup_invite'
@@ -38,18 +56,20 @@ ENCOUNTERTAGLIST = [
 LIKETAGLIST = [
     'like_each_other_button_click',
     'i_like_button_click',
-    'like_me_button_click'
+    'like_me_button_click',
+    'number_of_accessing_users'
 ]
 
 SETINGTAGLIST = [
-    'third_party invitation_we_chat_friends',
-    'third_party invitation_we_chat_memory',
-    'third_party invitation_micro-blog',
-    'third_party invitation_qq_space',
-    'third_party invitation_douban',
-    'third_party invitation_short_message',
-    'third_party invitation_renren',
-    'third_party invitation_tecent_micro-blog'
+    'third_party_invitation_we_chat_friends',
+    'third_party_invitation_we_chat_memory',
+    'third_party_invitation_micro-blog',
+    'third_party_invitation_qq_space',
+    'third_party_invitation_douban',
+    'third_party_invitation_short_message',
+    'third_party_invitation_renren',
+    'third_party_invitation_tecent_micro-blog',
+    'my_edit_button_click_number'
 ]
 
 CHANNELLIST = [

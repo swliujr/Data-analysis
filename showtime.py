@@ -8,7 +8,7 @@ from shareres import *
 import ConfigParser
 
 config = ConfigParser.RawConfigParser()
-config.read('config.py')
+config.read('config.cfg')
 
 #统计每个用户在一天中所有showtime的平均值
 

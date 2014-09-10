@@ -34,6 +34,6 @@ class Lelcs:
             reg = r'\|1\|%s' % tag
             userloglist = filter(self.slog,clogpath)
             useridlist = map((lambda x: x.split('_')[1].split('.')[0]),userloglist)
-            logindata.append({"tag":tag,"tatol":len(userloglist),"userid":useridlist})
+            logindata.append({"tag":tag,"total":len(userloglist),"userid":useridlist})
         rdata = {"detail":logindata}
         return rdata
