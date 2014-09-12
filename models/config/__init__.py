@@ -1,28 +1,33 @@
 # -*- coding: UTF-8 -*-
 
-#locale env
-DSCLOGBASE = '/home/allon/workspace/Data-analysis/constant'
-DFCLOGBASE = '/home/allon/workspace/Data-analysis/file'
+##locale env
+#DSCLOGBASE = '/home/allon/workspace/Data-analysis/constant'
+#DFCLOGBASE = '/home/allon/workspace/Data-analysis/file'
 ##mongo db connect
-MQHOST = 'localhost'
-MQPORT = 27017
+#MQHOST = 'localhost'
+#MQPORT = 27017
 ##mysql db connect
-MSHOST = '10.0.0.26'
-#port = 3306
-MSUSERNAME = 'meet_user'
-MSPASSWORD = 'meet_user'
-MSDBNAME = 'meet'
+#MSHOST = '10.0.0.26'
+#MSPORT = 3306
+#MSUSERNAME = 'meet_user'
+#MSPASSWORD = 'meet_user'
+#MSDBNAME = 'meet'
 
 #online env
-# dsclogbase = /home/work/clog/constant
-# dfclogbase = /home/work/clog/file
-# mghost = 'localhost'
-# mqport = '27017'
-# mshost = '10.0.0.26'
-# #port = 3306'
-# msusername = 'meet_user'
-# mspassword = 'meet_user'
-# msdbname = 'meet'
+DSCLOGBASE = '/home/work/baihe/fire/photo/clog/constant'
+DFCLOGBASE = '/home/work/baihe/fire/photo/clog/file'
+##保存数据库
+MQHOST = 'localhost'
+MQPORT = 27017
+##聊天数据库
+MCHOST = '172.16.4.227'
+MCPORT = 27001
+##业务数据库
+MSHOST = '172.16.4.246'
+MSPORT = 3306
+MSUSERNAME = 'user_meet_r'
+MSPASSWORD = 'user_meet1q2w3e4r'
+MSDBNAME = 'meet'
 
 SQLINIT = 'set session group_concat_max_len=9999999'
 

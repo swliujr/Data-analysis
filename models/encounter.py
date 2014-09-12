@@ -16,7 +16,7 @@ right_draw_record = "select concat('{\"tag\":\"right_draw_record\",\"tatol\":',c
 matching_successs_number = "select concat('{\"tag\":\"matching_successs_number\",\"total\":',count(lid),',\"userid\":[',group_concat(distinct(user_id)),']}') " \
                            "from meet_like " \
                            "where substr(from_unixtime(like_dateline),1,10)='2014-02-25'"
-contact_list = "select concat('{\"tag\":\"contact_list\",\"total\":',count(cid),',\"userid\":',group_concat(distinct(user_id)),'}')" \
+contact_list = "select concat('{\"tag\":\"contact_list\",\"total\":',count(cid),',\"userid\":[',group_concat(distinct(user_id)),']}')" \
                 " from meet_contacts " \
                 "where substr(from_unixtime(ctime),1,10) = '2014-07-03'"
 head_examine = "select concat('{\"tag\":\"head_examine\",\"total\":',count(id),',\"userid\":[',group_concat(id),']}') " \

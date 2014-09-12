@@ -30,11 +30,14 @@ date = ('2014','08','24')
 # s_login = connection.data.s_login
 # s_login.save(dict(login.meregdict(date,config.DFCLOGBASE,config.LOGINTAGLIST),**createtime))
 
-# s_encounter = connection.data.s_encounter
-# s_encounter.save(dict(encounter.meregdict(date,config.DFCLOGBASE,config.ENCOUNTERTAGLIST),**createtime))
+s_encounter = connection.data.s_encounter
+s_encounter.save(dict(encounter.meregdict(date,config.DFCLOGBASE,config.ENCOUNTERTAGLIST),**createtime))
 
 # s_like = connection.data.s_like
 # s_like.save(dict(like.tagdata(date,config.DFCLOGBASE,config.LIKETAGLIST),**createtime))
 
-# s_setting = connection.data.s_setting
-# s_setting.save(dict(setting.tagdata(date,config.DFCLOGBASE,config.SETINGTAGLIST),**createtime))
+#s_chat = connection.data.s_chat
+#s_chat.save(dict(chat.rundata(),**createtime))
+
+s_setting = connection.data.s_setting
+s_setting.save(dict(setting.tagdata(date,config.DFCLOGBASE,config.SETINGTAGLIST),**createtime))

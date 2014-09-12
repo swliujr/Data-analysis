@@ -56,7 +56,7 @@
 	"created" : "2014-08-28"
 }
 
-#encounter and like and setting
+#encounter like and setting
 {
 	"_id" : ObjectId("53ff0193aa0bc5d425ca9b17"),
 	"detail" : [
@@ -78,4 +78,24 @@
 		}
 	],
 	"created" : "2014-08-28"
+}
+
+#chat
+{
+	"_id" : ObjectId("5412605a9a2d8445234b2992"),
+	"detail" : [
+		{
+			"total" : 12952,
+			"tag" : "chat_visits"
+		},
+		{
+			"total" : 5104,
+			"tag" : "number_of_chat_visitor"
+		},
+		{
+			"total" : 2,
+			"tag" : "number_of_per_capita_chat"
+		}
+	],
+	"created" : "2014-09-11"
 }
