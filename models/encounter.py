@@ -10,25 +10,25 @@ tag = 'show_time'
 
 left_draw_record = "select concat('{\"tag\":\"left_draw_record\",\"tatol\":',count(user_id),',\"userid\":[',group_concat(distinct(user_id)),']}')" \
                         "from meet_dislike " \
-                        "where substr(from_unixtime(dateline),1,10) = '2014-07-10'"
+                        "where substr(from_unixtime(dateline),1,10) = date_add(current_date(),interval -1 day)"
 right_draw_record = "select concat('{\"tag\":\"right_draw_record\",\"tatol\":',count(user_id),',\"userid\":[',group_concat(distinct(user_id)),']}') " \
                         "from meet_like " \
-                        "where substr(from_unixtime(dateline),1,10) = '2014-07-10'"
+                        "where substr(from_unixtime(dateline),1,10) = date_add(current_date(),interval -1 day)"
 matching_successs_number = "select concat('{\"tag\":\"matching_successs_number\",\"total\":',count(lid),',\"userid\":[',group_concat(distinct(user_id)),']}') " \
                            "from meet_like " \
-                           "where substr(from_unixtime(like_dateline),1,10)='2014-02-25'"
+                           "where substr(from_unixtime(like_dateline),1,10)=date_add(current_date(),interval -1 day)"
 contact_list = "select concat('{\"tag\":\"contact_list\",\"total\":',count(cid),',\"userid\":[',group_concat(distinct(user_id)),']}')" \
                 " from meet_contacts " \
-                "where substr(from_unixtime(ctime),1,10) = '2014-07-03'"
+                "where substr(from_unixtime(ctime),1,10) = date_add(current_date(),interval -1 day)"
 head_examine = "select concat('{\"tag\":\"head_examine\",\"total\":',count(id),',\"userid\":[',group_concat(id),']}') " \
                "from meet_user " \
-               "where substr(ctime,1,10)='2014-09-01' and substr(mobile,1,1)!='w' and avatar_status=3"
+               "where substr(ctime,1,10)=date_add(current_date(),interval -1 day) and substr(mobile,1,1)!='w' and avatar_status=3"
 photo_number = "select concat('{\"tag\":\"photo_number\",\"total\":',count(id),',\"userid\":[',group_concat(user_id),']}') " \
                "from meet_user_photo " \
-               "where substr(ctime,1,10)='2014-09-01'"
+               "where substr(ctime,1,10)=date_add(current_date(),interval -1 day)"
 personal_data_not_complete = "select concat('{\"tag\":\"personal_data_not_complete\",\"total\":',count(id),',\"userid\":[',group_concat(id),']}') " \
                              "from meet_user " \
-                             "where step!=0 and substr(mobile,1,1)!='w' and substr(ctime,1,10)='2014-09-01'"
+                             "where step!=0 and substr(mobile,1,1)!='w' and substr(ctime,1,10)=date_add(current_date(),interval -1 day)"
 #get show time data
 def filelist(date,dfclogbase):
     filelist = lelcs.listfile(date,dfclogbase)
