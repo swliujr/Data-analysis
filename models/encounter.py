@@ -3,6 +3,7 @@
 import lelcs
 import getmysqldata
 import simplejson as json
+import re
 
 import config
 tag = 'show_time'
@@ -28,6 +29,35 @@ photo_number = "select concat('{\"tag\":\"photo_number\",\"total\":',count(id),'
 personal_data_not_complete = "select concat('{\"tag\":\"personal_data_not_complete\",\"total\":',count(id),',\"userid\":[',group_concat(id),']}') " \
                              "from meet_user " \
                              "where step!=0 and substr(mobile,1,1)!='w' and substr(ctime,1,10)='2014-09-01'"
+#get show time data
+def filelist(date,dfclogbase):
+    filelist = lelcs.listfile(date,dfclogbase)
+    return filelist
+
+def slog(log):
+    r = {}
+    v = 0
+    userid = log.split('_')[1].split('.')[0]
+    global reg
+    reg = r'%s\|(\d+)' % tag
+    imgre = re.compile(reg)
+    logfile = open(log,'r')
+    flog = logfile.read()
+    frlog = re.findall(imgre,flog)
+    logfile.close
+    if frlog:
+        # v = "{:.1f}".format(sum([int(x) for x in frlog])/len(frlog))
+        v = sum([int(x) for x in frlog])/len(frlog)
+    r[userid] = v
+    return r
+
+def getclogresult(date,dfclogbase):
+    date = list(date)
+    getclog = filelist(date,dfclogbase)
+    userloglist = map(slog,getclog)
+    return userloglist
+
+#get tag data
 
 def tagdata(date,dfclogbase,encountertaglist):
     data = lelcs.runlelcs(date,dfclogbase,encountertaglist)
