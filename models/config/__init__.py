@@ -26,7 +26,7 @@ MCPORT = 27001
 MSHOST = '172.16.4.246'
 MSPORT = 3306
 MSUSERNAME = 'user_meet_r'
-MSPASSWORD = 'user_meet1q2w3e4r'
+MSPASSWORD = 'xxxxxxxxxxxxx'
 MSDBNAME = 'meet'
 
 SQLINIT = 'set session group_concat_max_len=9999999'
